@@ -1,0 +1,15 @@
+{
+    "VSCode: Get selected text": {
+        "body": [
+            "let textEditor = vscode.window.activeTextEditor;",
+            "if (!textEditor) {",
+            "    vscode.window.showErrorMessage(\"No active text editor found.\");",
+            "    return;",
+            "}",
+            "let selectedText = textEditor.document.getText(textEditor.selection);"
+        ],
+        "description": "Get the selected text from the current active document.",
+        "prefix": "get-selected-text",
+        "scope": "javascript,typescript"
+    }
+}

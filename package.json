@@ -1,0 +1,28 @@
+{
+    "name": "vscode-extension-author-snippets",
+    "displayName": "Extension Snippets",
+    "author": {
+        "name": "box-of-hats"
+    },
+    "publisher": "box-of-hats",
+    "description": "A collection of snippets for writing extensions for VSCode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
