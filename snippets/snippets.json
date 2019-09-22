@@ -11,5 +11,24 @@
         "description": "Get the selected text from the current active document.",
         "prefix": "get-selected-text",
         "scope": "javascript,typescript"
+    },
+    "VSCode: Create new document": {
+        "body": [
+            "vscode.workspace",
+            "    .openTextDocument({",
+            "        language: \"${1|plaintext,abap,bat,bibtex,clojure,coffeescript,c,cpp,csharp,css,diff,dockerfile,fsharp,git-commit,git-rebase,go,groovy,handlebars,html,ini,java,javascript,javascriptreact,json,jsonc,latex,less,lua,makefile,markdown,objective-c,objective-cpp,perl and perl6,php,powershell,jade,python,r,razor,ruby,rust,scss,sass,shaderlab,shellscript,sql,swift,typescript,typescriptreact,tex,vb,xml,xsl,yaml|}\",",
+            "        content: ${2:content}",
+            "    })",
+            "    .then(doc => {",
+            "        vscode.window.showTextDocument(doc).then(e => {",
+            "            vscode.commands.executeCommand(",
+            "                \"editor.action.formatDocument\"",
+            "            );",
+            "        });",
+            "    });"
+        ],
+        "description": "Open a new file with content and a language.",
+        "prefix": "create-new-document",
+        "scope": "javascript,typescript"
     }
 }
